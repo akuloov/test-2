@@ -1,0 +1,13 @@
+// sass-lint:disable-all
+@mixin visuallyhidden () {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px !important;
+	width: 1px !important;
+	margin: -1px;
+	padding: 0 !important;
+	border: none !important;
+	overflow: hidden;
+}
+// sass-lint:enable-all

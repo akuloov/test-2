@@ -1,0 +1,15 @@
+@use 'sass:math';
+
+////
+/// @group _settings/
+////
+
+/// Получение `unitless`
+/// @param {number} $number - размер
+/// @return {number}
+@function strip-units ($number) {
+	@if type-of($number) == 'number' and not unitless($number) {
+		@return math.div($number, $number * 0 + 1);
+	}
+	@return $number;
+}

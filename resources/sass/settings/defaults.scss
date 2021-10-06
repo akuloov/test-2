@@ -1,0 +1,17 @@
+$breakpoints: (
+	st: 320px,
+	xs: 360px,
+	psw: 412px,
+	sm: 480px,
+	ms: 640px,
+	psh: 732px,
+	md: 768px,
+	def: 1024px,
+	lg: 1280px,
+	xl: 1366px,
+	mg: 1440px,
+	container: 1560px, // 20px оставил на скролл
+	dt: 1920px
+);
+
+$border-grey: #e9e9e9;

@@ -1,0 +1,36 @@
+////
+/// @group _settings/
+////
+
+/// Медиа запросы
+/// @param {Number|Keyword|String} $value - значение брейкпоинта
+/// @param {Keyword} $direction [min] - 'направление' медиа запроса
+/// @param {Keyword} $dimension [width] - величина
+@mixin media($value, $direction: min, $dimension: width) {
+	$corrector: 0;
+
+	@if $direction == max {
+		$corrector: -1;
+	}
+
+	@if map-has-key($breakpoints, $value) {
+		$value: map-get($breakpoints, $value);
+	}
+
+	@if type-of($value) == number {
+		$dir: #{$direction}-width;
+
+		@if $dimension == height {
+			$dir: #{$direction}-height;
+		}
+
+		@media ($dir: $value + $corrector) {
+			@content;
+		}
+
+	} @else {
+		@media #{$value} {
+			@content;
+		}
+	}
+}

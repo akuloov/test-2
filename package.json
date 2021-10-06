@@ -1,0 +1,41 @@
+{
+    "name": "html",
+    "version": "1.0.0",
+    "description": "",
+    "main": "webpack.config.js",
+    "scripts": {
+        "watch": "npm run dev -- --watch --env watch",
+        "dev": "webpack --env mode=development --env clear",
+        "prod": "webpack --env mode=production --env clear",
+        "sass-lint": "sass-lint -c \"./.sass-lint.yml\" -v -q"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "10.3.1",
+        "browser-sync": "2.27.5",
+        "browser-sync-webpack-plugin": "2.3.0",
+        "css-loader": "6.2.0",
+        "css-mqpacker": "7.0.0",
+        "del": "6.0.0",
+        "json-loader": "0.5.7",
+        "mini-css-extract-plugin": "2.1.0",
+        "path": "0.12.7",
+        "postcss": "8.3.6",
+        "postcss-loader": "6.1.1",
+        "sass": "1.36.0",
+        "sass-lint": "1.13.1",
+        "sass-loader": "12.1.0",
+        "sort-css-media-queries": "2.0.4",
+        "style-loader": "3.2.1",
+        "terser-webpack-plugin": "5.1.4",
+        "webpack": "5.47.1",
+        "webpack-cli": "4.7.2"
+    },
+    "dependencies": {
+        "normalize.css": "8.0.1"
+    },
+    "browserslist": [
+        "defaults"
+    ]
+}

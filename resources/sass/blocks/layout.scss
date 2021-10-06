@@ -1,0 +1,19 @@
+.layout {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	position: relative;
+	height: auto;
+	min-height: 100vh;
+
+	&.mm-page {
+		background-color: #fff !important; // sass-lint:disable-line no-important
+	}
+
+	&__body {
+		flex-grow: 1;
+	}
+
+	// &__footer {}
+
+}

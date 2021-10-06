@@ -1,0 +1,33 @@
+@use 'sass:math';
+
+////
+/// @group _settings/
+////
+
+/// Получение размера в `vw` от указанного значения
+/// @param {number} $value - размер в `px`
+/// @param {number} $base [19.2px] - основное значение, которое берется за единицу, исходя из 100vw === 1920px
+/// @return {number}
+@function vw ($value, $base: 19.2px) {
+	@if not unitless($value) {
+		$value: strip-units($value);
+	}
+	@if not unitless($base) {
+		$base: strip-units($base);
+	}
+	@return math.div($value, $base) * 1vw;
+}
+
+/// Получение размера в `vh` от указанного значения
+/// @param {number} $value - размер в `px`
+/// @param {number} $base [10.8px] - основное значение, которое берется за единицу, исходя из 100vh === 1080px
+/// @return {number}
+@function vh ($value, $base: 10.8px) {
+	@if not unitless($value) {
+		$value: strip-units($value);
+	}
+	@if not unitless($base) {
+		$base: strip-units($base);
+	}
+	@return math.div($value, $base) * 1vh;
+}

@@ -1,0 +1,9 @@
+////
+/// @group _settings/
+////
+
+/// Hex to Rgb
+/// @param {color} $color - HEX цвет
+@function toRGB ($color) {
+	@return 'rgb(' + red($color) + ', ' + green($color) + ', ' + blue($color) + ')';
+}

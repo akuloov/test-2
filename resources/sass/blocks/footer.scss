@@ -1,79 +1,83 @@
 .footer {
     height: auto;
     background: #245420;
-    
-    &__flex-container{
+
+    &__flex-container {
         display: flex;
         justify-content: space-between;
         padding-top: 56px;
         margin-bottom: 35px;
-        
-        &:first-child{
+
+        &:first-child {
             align-items: flex-start;
         }
     }
-    
-    &__block{
+
+    &__block {
         display: flex;
         flex-direction: column;
-        
-        &-title{
+
+        &-title {
             font-size: 20px;
             color: #FFF;
             margin: 0;
             margin-bottom: 24px;
         }
     }
-    
-    &__link{
+
+    &__link {
         font-size: 14px;
         color: #FFF;
         opacity: 0.6;
-        padding-bottom:  12px;
+        padding-bottom: 12px;
     }
-    
-    &__block-button{
+
+    &__block-button {
         display: flex;
         padding-top: 10px;
-        
-        &_text{
+
+        &_text {
             font-size: 13px;
             color: #FFF;
             opacity: 0.6;
             padding-right: 16px;
         }
     }
-    
-    &__button-up{
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.2);
-        position: relative;
-        
-        &__image{
-            transform: rotate(-90deg);
-            position: absolute;
-            right: 20px;
-            top: 15px;
-        }
-    }
-    
-    &-down{
+
+    &-down {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 69px;
         border-top: 1px solid rgba(255, 255, 255, 0.2);
-        
-        &__text{
+
+        &__text {
             font-size: 14px;
             color: rgba(255, 255, 255, 0.4);
-            
-            &_bold{
+
+            &_bold {
                 font-weight: bold;
                 color: rgba(255, 255, 255, 1);
             }
         }
     }
+}
+
+#scrollToTop {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: relative;
+    
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+#footer__button-up__image {
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 20px;
+    top: 15px;
 }
